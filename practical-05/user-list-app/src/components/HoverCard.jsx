@@ -3,9 +3,9 @@ import styles from "./HoverCard.module.css";
 const HoverCard = ({user}) => {
 
     return (
-      <div className={styles["hero_main_card"] `${user !== null ? 'show' : 'hide'}`}>
+      <div className={`${user !== null ? 'show' : 'hide'}`}>
         {user !== null && (
-          <>
+          <div className={styles.main}>
                   <div className={styles["card_inner"]}>
                   <div className={styles.CardHeader}>
                     <img src={`${user.avatar}`} alt="img" />
@@ -35,7 +35,7 @@ const HoverCard = ({user}) => {
                     </div>
                   </div>
                 </div>
-        </>
+        </div>
         )}
       </div>
     );

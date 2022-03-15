@@ -11,13 +11,13 @@ body {
   justify-content:center;
   align-items:center;
   margin:10px 0;
-  background-color: #051747;
+  background-color: #aeb7cf73;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .card {
-  min-height: 95vh;
-  width: 80vw;
+  height: 780px;
+  width: 1000px;
   padding-left: 10px;
   background-color: #fff;
   border-radius: 5px;

@@ -3,7 +3,7 @@ import styles from "./UserTable.module.css";
 import { useDispatch } from "react-redux";
 import { BiLockAlt } from "react-icons/bi";
 import { RiDeleteBinFill } from "react-icons/ri";
-import { hoverOver, deleteUser } from '../Redux/userAction'
+import {deleteUser } from '../Redux/userAction'
 
 const Users = ({person, handleHover}) => {
     const dispatch = useDispatch();
@@ -15,21 +15,21 @@ const handleMouseLeave = React.useCallback(() => {
     handleHover(null);
 }, [handleHover]);
 
-  // const handleRemoveUser = () => dispatch(deleteUser(person.id));
+  const handleRemoveUser = () => dispatch(deleteUser(person.id));
 
   return (
-    <tr className={styles.userTable}>
-      <td className={styles.col1} onMouseEnter={handleMouseEnter} >
-        <img src={person.avatar} alt="user_image" />
-        <div className={styles.nameEmail}>
-          <p className={styles.name}>{`${person.first_name} ${person.last_name}`}</p>
-          <p className={styles.email}>{person.email}</p>
-        </div>
-      </td>
-      <td className={styles["status_dropdown"]}>
-        {person.isActive && <p style={{ color: "#1cab1c" }}>Active</p>}
+    <div className={styles.userTable}>
+      <div className={styles.col1} >
+        <img src={person.avatar} alt="user_image" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+        <ul className={styles.nameEmail}>
+          <li className={styles.name} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{`${person.first_name} ${person.last_name}`}</li>
+          <div className={styles.email}>{person.email}</div>
+        </ul>
+      </div>
+      <div className={styles["status_dropdown"]}>
+        {person.isActive && <p className={styles.is_active}>Active</p>}
         {!person.isActive && (
-          <div className="dropdown">
+          <p className="dropdown">
             <select className={styles.select}>
               {!person.isActive && (
                 <>
@@ -38,11 +38,11 @@ const handleMouseLeave = React.useCallback(() => {
                 </>
               )}
             </select>
-          </div>
+          </p>
         )}
-      </td>
+      </div>
       <div className={styles["access_dropdown"]}>
-        {person.isOwner && <p>Owner</p>}
+        {person.isOwner && <p className={styles.is_owner}>Owner</p>}
         {!person.isOwner && (
           <div className="dropdown">
             <select className={styles.select}>
@@ -58,11 +58,11 @@ const handleMouseLeave = React.useCallback(() => {
         </div>
       )}
       {!person.isOwner && (
-        <div className={styles.icon} >
+        <div className={styles.trash} onClick={handleRemoveUser}>
           <RiDeleteBinFill />
         </div>
       )}
-    </tr>
+    </div>
   );
 };
 

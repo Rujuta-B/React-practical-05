@@ -1,49 +1,33 @@
-import React from 'react';
-import styles from "./UserList.module.css";
-import UserTable from "./UserTable";
+import React from "react";
 import { useSelector } from "react-redux";
+import UserTable from "./UserTable";
 import HoverCard from "./HoverCard";
-
+import TableHeader from "./TableHeader";
+import styles from "./UserList.module.css";
 
 const UsersList = () => {
-  const users = useSelector(state => state.users);
+  const users = useSelector((state) => state.users);
   const [user, setUser] = React.useState(null);
 
-
-  const handleHover =(
-    (user) => {
-        setUser(user);
-    }
-    
-)
-
+  const handleHover = (user) => {
+    setUser(user);
+  };
 
   return (
     <>
-    <table className={styles.mainContainer}>
-      <div className={styles["container_inner"]}>
-        <tr className={styles.titles}>
-          <thead>Name</thead>
-          <thead>Status</thead>
-          <thead>Access</thead>
-        </tr>
+      <table className={styles.mainContainer}>
+        <TableHeader />
         {users.map((user) => {
           return (
-            <>
-              <UserTable
-                key={user.id}
-                id={user.id}
-                person={user}
-                email={user.email}
-                isOwner={user.isOwner}
-                isActive={user.isActive}
-                handleHover={handleHover} />
-            </>
+            <UserTable
+              key={user.id}
+              person={user}
+              handleHover={handleHover}
+            />
           );
         })}
-      </div>
-    </table>
-  
+      </table>
+      <HoverCard user={user} />
     </>
   );
 };

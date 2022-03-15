@@ -1,14 +1,14 @@
-.hero_main_card {
+.main {
+  /* margin-left: 100px; */
     height: 400px;
     width: 245px;
     background-color: white;
     border-radius: 25px;
     color: #524a4a;
     font-family: arial;
-    box-shadow: rgb(229 229 229 / 10%) 2px 5px 1px 1px,
-      rgb(176 176 189 / 25%) 3px 2px 7px 0px, rgb(34 34 34 / 25%) 3px 2px 7px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       position: fixed;
-      right: 6%;
+      right: 8%;
       top: 19%;
   }
   .message_card{
@@ -93,7 +93,7 @@
     outline: 0;
     border: 0;
     border-radius: 5px;
-    background-color: rgb(237 162 64);
+    background-color: rgb(241, 156, 44);
     color: white;
     font-weight: bold;
     margin-top: 3px;
@@ -101,7 +101,7 @@
     width: 65%;
   }
   .CardHeader .btn_active_user:hover {
-    background-color: rgb(240, 144, 18);
+    background-color: rgb(241, 156, 44);
   }
   .planUser {
     display: flex;

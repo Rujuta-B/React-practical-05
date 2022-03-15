@@ -1,5 +1,4 @@
 import { removeUser } from "./userTypes";
-import { hoverUser } from "./userTypes";
 
 const initialState = {
     users: [
@@ -123,10 +122,6 @@ const userReducer = (state = initialState, action) => {
             return{
                 ...state,
                 users : newUsers
-            }
-            case hoverUser: return{
-                ...state,
-                id : action.payload - 1
             }
             default: return state
         }

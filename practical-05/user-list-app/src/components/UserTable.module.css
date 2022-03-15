@@ -1,66 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&family=Hubballi&family=Poppins:wght@200&family=Roboto:wght@300;500&family=Source+Sans+Pro&display=swap");
+
 .userTable {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .col1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 10px 10px;
-    width: 320px;
-  }
-  .col1 :hover{
-    cursor: pointer;
-  }
-  
-  .col1 img {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin-right: 13px;
-  }
-  .col1 .name {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  .col1 .email{
-    padding-top: 4px;
-    font-size: 0.9rem;
-  }
-  .status_dropdown,
-  .access_dropdown {
-    width: 200px;
-  }
- 
-  .btn {
-    background-color: #edf2f5;
-  }
-  .btn:focus {
-    outline: 0;
-    box-shadow: none;
-  }
-  .icon{
-    margin-left: 10px;
-    width:100px;
-    
-  }
-  .icon:hover{
-    cursor: pointer;
-  }
-  .select{
-    outline: none;
-    border: 0;
-    background-color: #f2f2f2;
-    padding: 6px;
-    border-radius: 3px;
-    
-  }
-  .select:hover{
-    cursor: pointer;
-  }
-  .trashChange{
-    background-color: red;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 10px;
+  width: 320px;
+}
+.col1 :hover {
+  cursor: pointer;
+}
+
+.col1 img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 13px;
+}
+.col1 .name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  list-style: none;
+}
+.col1 .email {
+  padding-top: 4px;
+  font-size: 0.9rem;
+  list-style: none;
+}
+.status_dropdown,
+.access_dropdown {
+  width: 200px;
+}
+
+.btn {
+  background-color: #edf2f5;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.icon {
+  color: rgba(86, 87, 86, 0.89);
+  margin-left: 10px;
+  width: 100px;
+}
+
+.select {
+  outline: none;
+  border: 0;
+  background-color: #f2f2f2;
+  padding: 6px;
+  border-radius: 3px;
+}
+.select:hover {
+  cursor: pointer;
+}
+.trash {
+  color: rgba(218, 8, 8, 0.363);
+  margin-left: 10px;
+  /* width: 100px; */
+  font-size: 22px;
+}
+.trash:hover {
+  cursor: pointer;
+  color: rgba(218, 8, 8, 0.904);
+}
+.is_active {
+  color: rgba(3, 145, 22, 0.89);
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 550;
+}
+.is_owner {
+  color: rgba(148, 151, 148, 0.89);
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: 550;
+}
