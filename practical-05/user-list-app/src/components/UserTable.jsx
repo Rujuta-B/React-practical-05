@@ -7,14 +7,18 @@ import { deleteUser } from "../Redux/userAction";
 
 const UserTable = ({ person, handleHover }) => {
   const dispatch = useDispatch();
+
+  //shows user card when hovered on name or avatar
   const handleMouseEnter = React.useCallback(() => {
     handleHover(person);
   }, [person, handleHover]);
 
+  //to hide the user card when mouse is away from user
   const handleMouseLeave = React.useCallback(() => {
     handleHover(null);
   }, [handleHover]);
 
+  //dispatches action to delete a user
   const handleRemoveUser = () => dispatch(deleteUser(person.id));
 
   return (

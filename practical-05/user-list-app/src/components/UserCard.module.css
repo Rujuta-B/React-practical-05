@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Hubballi&family=Poppins:wght@200&family=Roboto:wght@300;500&family=Source+Sans+Pro&display=swap');
+
+.main {
+  /* margin-left: 100px; */
+    height: 400px;
+    width: 245px;
+    background-color: white;
+    border-radius: 25px;
+    color: #524a4a;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      position: fixed;
+      right: 8%;
+      top: 19%;
+  }
+  .message_card{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 25px;
+    color: #524a4a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: rgb(229 229 229 / 10%) 2px 5px 1px 1px,
+      rgb(176 176 189 / 25%) 3px 2px 7px 0px, rgb(34 34 34 / 25%) 3px 2px 7px 0px;
+      position: fixed;
+      right: 6%;
+      top: 29%;
+  }
+  .cardBody,
+  .CardHeader,
+  .CardHeader_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hover_message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+  }
+  .hover_message h3{
+    color: mix(#fff, #e91e63, 85%);
+    font-size: 1.4rem;
+      font-weight: 900;
+      text-shadow: 
+          -0.0075em 0.0075em 0 mix(#fff, #e91e63, 94%),
+          0.005em 0.005em 0 mix(#fff, #e91e63, 60%),
+          0.01em 0.01em 0 mix(#fff, #e91e63, 62%), 
+          0.015em 0.015em mix(#fff, #e91e63, 64%), 
+          0.02em 0.02em 0 mix(#fff, #e91e63, 66%), 
+          0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
+          0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
+          0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
+  }
+  .CardHeader {
+    width: 100%;
+    height: 50%;
+  }
+  .CardHeader img {
+    border:0;
+    border-radius: 50%;
+    height: 100px;
+    width: 110px;
+    /* border: */
+    margin-top: 20px;
+  }
+  .CardHeader h2, .activeUser {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+  .activeUser{
+    display:flex;
+  }
+  .activeStatus{
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: green;
+    /* margin-top: 4px; */
+    margin-left: 6px;
+  }
+  .inActiveStatus{
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: rgba(77, 80, 77, 0.829);
+    /* margin-top: 4px; */
+    margin-left: 6px;
+  }
+  .CardHeader p {
+    font-size: 0.8rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .CardHeader .activeBtn {
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(241, 156, 44);
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 9px;
+    width: 65%;
+  }
+  .inActiveBtn {
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(77, 80, 77, 0.829);
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 9px;
+    width: 65%;
+  }
+  .CardHeader .activeBtn:hover {
+    background-color: rgb(241, 156, 44);
+  }
+  .planUser {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 22px;
+  }
+  .planUser label {
+    font-size: 0.8rem;
+    font-weight: 1000;
+  }
+  .planUser meter {
+    width: 100%;
+  }
+  meter::-webkit-meter-optimum-value {
+    background: rgb(230, 138, 19);
+  }
+  .numberData {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 15px;
+  }
+  .numberData .dataLeft,
+  .dataRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .numberData h2 {
+    letter-spacing: 1.2px;
+  }
+  .numberData .middle_bar {
+    border-left: 1px solid;
+  }
+.clicks p{
+    font-size: 13px;
+  }
+  
+.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hide {
+    opacity: 0;
+    transform: scale(0);
+}
