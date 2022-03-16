@@ -6,6 +6,7 @@ import TableHeader from "./TableHeader";
 import styles from "./UserList.module.css";
 
 const UsersList = () => {
+  //to grab user data in a central location with useSelector Hook
   const users = useSelector((state) => state.users);
   const [user, setUser] = React.useState(null);
 
@@ -15,7 +16,7 @@ const UsersList = () => {
 
   return (
     <>
-      <table className={styles.mainContainer}>
+      <div className={styles.mainContainer}>
         <TableHeader />
         {users.map((user) => {
           return (
@@ -26,7 +27,7 @@ const UsersList = () => {
             />
           );
         })}
-      </table>
+      </div>
       <HoverCard user={user} />
     </>
   );

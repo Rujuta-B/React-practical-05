@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Hubballi&family=Poppins:wght@200&family=Roboto:wght@300;500&family=Source+Sans+Pro&display=swap');
+
 .main {
   /* margin-left: 100px; */
     height: 400px;
@@ -5,7 +7,7 @@
     background-color: white;
     border-radius: 25px;
     color: #524a4a;
-    font-family: arial;
+    font-family: 'Fredoka', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       position: fixed;
       right: 8%;
@@ -17,14 +19,14 @@
     background-color: white;
     border-radius: 25px;
     color: #524a4a;
-    font-family: arial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-shadow: rgb(229 229 229 / 10%) 2px 5px 1px 1px,
       rgb(176 176 189 / 25%) 3px 2px 7px 0px, rgb(34 34 34 / 25%) 3px 2px 7px 0px;
       position: fixed;
       right: 6%;
       top: 29%;
   }
-  .card_inner,
+  .cardBody,
   .CardHeader,
   .CardHeader_inner {
     display: flex;
@@ -67,29 +69,36 @@
     /* border: */
     margin-top: 20px;
   }
-  .CardHeader h2, .userActive {
+  .CardHeader h2, .activeUser {
     font-size: 0.9rem;
     margin: 6px 0;
   }
-  .userActive{
+  .activeUser{
     display:flex;
   }
   .activeStatus{
-    height: 5px;
-    width: 5px;
+    height: 9px;
+    width: 9px;
     border-radius: 50%;
     background-color: green;
     /* margin-top: 4px; */
     margin-left: 6px;
   }
-  
+  .inActiveStatus{
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: rgba(77, 80, 77, 0.829);
+    /* margin-top: 4px; */
+    margin-left: 6px;
+  }
   .CardHeader p {
     font-size: 0.8rem;
   }
   p {
     margin-bottom: 0;
   }
-  .CardHeader .btn_active_user {
+  .CardHeader .activeBtn {
     outline: 0;
     border: 0;
     border-radius: 5px;
@@ -100,7 +109,18 @@
     padding: 9px;
     width: 65%;
   }
-  .CardHeader .btn_active_user:hover {
+  .inActiveBtn {
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(77, 80, 77, 0.829);
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 9px;
+    width: 65%;
+  }
+  .CardHeader .activeBtn:hover {
     background-color: rgb(241, 156, 44);
   }
   .planUser {
@@ -111,6 +131,7 @@
   }
   .planUser label {
     font-size: 0.8rem;
+    font-weight: 1000;
   }
   .planUser meter {
     width: 100%;
@@ -137,15 +158,10 @@
   .numberData .middle_bar {
     border-left: 1px solid;
   }
-  .dataLeft p,
-  .dataRight p {
-    font-size: 0.8rem;
+.clicks p{
+    font-size: 13px;
   }
   
-  /* .profile-card {
-    transition: all 300ms ease-in-out;
-} */
-
 .show {
     opacity: 1;
     transform: scale(1);

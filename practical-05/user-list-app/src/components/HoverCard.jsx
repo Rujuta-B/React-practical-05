@@ -6,16 +6,18 @@ const HoverCard = ({user}) => {
       <div className={`${user !== null ? 'show' : 'hide'}`}>
         {user !== null && (
           <div className={styles.main}>
-                  <div className={styles["card_inner"]}>
+                <div className={styles.cardBody}>
                   <div className={styles.CardHeader}>
                     <img src={`${user.avatar}`} alt="img" />
-                    <div className={styles.userActive}>
+                    <div className={styles.activeUser}>
                       <h2>{`${user.first_name} ${user.last_name}`}</h2>
                       {user.isActive && <div className={styles.activeStatus}></div>}
+                      {!user.isActive && <div className={styles.inActiveStatus}></div>}
                     </div>
                     <p>{user.email}</p>
                     <h2>Your Plan: Standard</h2>
-                    <button className={styles["btn_active_user"]}>Active User</button>
+                    {user.isActive &&  <button className={styles.activeBtn}>Active User</button>}
+                    {!user.isActive &&  <button className={styles.inActiveBtn}>Inactive User</button>}
                   </div>
                   <div className={styles.planUser}>
                     <label>Plan Uses</label>
@@ -24,12 +26,12 @@ const HoverCard = ({user}) => {
                     </meter>
                   </div>
                   <div className={styles.numberData}>
-                    <div className={styles.dataLeft}>
+                    <div className={styles.clicks}>
                       <h2>{user.clicksReviewed}</h2>
                       <p>Clicks Reviewed</p>
                     </div>
                     <div className={styles.middle_bar}></div>
-                    <div className={styles.dataRight}>
+                    <div className={styles.clicks}>
                       <h2>{user.monthlyClicks}</h2>
                       <p>Monthly Clicks</p>
                     </div>

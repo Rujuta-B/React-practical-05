@@ -3,11 +3,11 @@ import styles from './TableHeader.module.css'
 const TableHeader = () => {
   return (
     <>
-      <tr className={styles.titles}>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Access</th>
-      </tr>
+      <div className={styles.title}>
+        <div>Name</div>
+        <div className={styles.status}>Status</div>
+        <div className={styles.access}>Access</div>
+      </div>
     </>
   );
 };

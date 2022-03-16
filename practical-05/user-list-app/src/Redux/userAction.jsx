@@ -1,6 +1,5 @@
 import { removeUser } from "./userTypes";
 
-
 //action creator function
 export const deleteUser = (id) => {
     return {

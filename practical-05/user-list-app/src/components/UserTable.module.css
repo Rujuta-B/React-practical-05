@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
 }
-.col1 {
+.userDetails {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -13,29 +13,29 @@
   margin: 10px 10px;
   width: 320px;
 }
-.col1 :hover {
+.userDetails :hover {
   cursor: pointer;
 }
 
-.col1 img {
+.userDetails img {
   border-radius: 50%;
   height: 50px;
   width: 50px;
   margin-right: 13px;
 }
-.col1 .name {
+.userDetails .name {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 600;
   list-style: none;
 }
-.col1 .email {
+.userDetails .email {
   padding-top: 4px;
-  font-size: 0.9rem;
+  font-size: 14px;
   list-style: none;
 }
-.status_dropdown,
-.access_dropdown {
+
+.dropdown {
   width: 200px;
 }
 
@@ -46,10 +46,10 @@
   outline: 0;
   box-shadow: none;
 }
-.icon {
+.lock {
   color: rgba(86, 87, 86, 0.89);
-  margin-left: 10px;
-  width: 100px;
+  margin-left:50px;
+  width: 19px;
 }
 
 .select {
@@ -77,10 +77,12 @@
   font-size: 15px;
   font-family: Roboto;
   font-weight: 550;
+  padding-left: 30px;
 }
 .is_owner {
   color: rgba(148, 151, 148, 0.89);
   font-size: 15px;
   font-family: Roboto;
   font-weight: 550;
+  padding-left: 43px;
 }
